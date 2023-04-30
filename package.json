@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "test": "jest",
     "dev": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack-dev-server --mode=development",
     "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack --mode=production",
     "postbuild": "cp ./public/index.html ./dist/index.html",
@@ -25,6 +26,7 @@
     "eslint": "^6.7.1",
     "eslint-config-kentcdodds": "^14.6.1",
     "file-loader": "^5.0.2",
+    "jest": "^29.5.0",
     "prettier": "^1.19.1",
     "prop-types": "^15.7.2",
     "serve": "^11.2.0",
