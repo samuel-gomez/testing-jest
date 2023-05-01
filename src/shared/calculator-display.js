@@ -1,29 +1,31 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from '@emotion/styled'
 import AutoScalingText from './auto-scaling-text'
 import {getFormattedValue} from './utils'
+
+const DisplayContainer = styled.div(
+  {
+    position: 'relative',
+    lineHeight: '130px',
+    fontSize: '6em',
+    flex: '1',
+  },
+  ({theme}) => ({
+    color: theme.displayTextColor,
+    background: theme.displayBackgroundColor,
+  }),
+)
 
 function CalculatorDisplay({value, ...props}) {
   const formattedValue = getFormattedValue(
     value,
     typeof window === 'undefined' ? 'en-US' : window.navigator.language,
   )
-
   return (
-    <div
-      {...props}
-      id="calculator-display"
-      css={{
-        position: 'relative',
-        color: 'white',
-        background: '#1c191c',
-        lineHeight: '130px',
-        fontSize: '6em',
-        flex: '1',
-      }}
-    >
+    <DisplayContainer {...props} id="calculator-display">
       <AutoScalingText>{formattedValue}</AutoScalingText>
-    </div>
+    </DisplayContainer>
   )
 }
 

@@ -22,6 +22,13 @@ module.exports = {
       rules: {
         'no-console': 'off',
       },
+      settings: {
+        'import/resolver': {
+          jest: {
+            jestConfigFile: path.join(__dirname, './jest.config.js'),
+          },
+        },
+      },
     },
   ],
 }
