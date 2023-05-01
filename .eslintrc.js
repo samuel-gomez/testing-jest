@@ -17,5 +17,11 @@ module.exports = {
       files: ['**/src/**'],
       settings: {'import/resolver': 'webpack'},
     },
+    {
+      files: ['**/__tests__/**'],
+      rules: {
+        'no-console': 'off',
+      },
+    },
   ],
 }
