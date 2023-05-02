@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "test:watch": "jest --watch",
     "dev": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack-dev-server --mode=development",
     "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack --mode=production",
     "postbuild": "cp ./public/index.html ./dist/index.html",
