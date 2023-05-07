@@ -13,4 +13,19 @@ module.exports = {
   },
   snapshotSerializers: ['@emotion/jest/serializer'],
   setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
+  collectCoverageFrom: ['**/src/**/*.js', '!**/src/**/index.js'],
+  coverageThreshold: {
+    global: {
+      statements: 35,
+      branches: 20,
+      functions: 31,
+      lines: 35,
+    },
+    './src/shared/utils.js': {
+      statements: 100,
+      branches: 80,
+      functions: 100,
+      lines: 100,
+    },
+  },
 }

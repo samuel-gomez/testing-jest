@@ -5,6 +5,7 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
+    "test:cover": "jest --coverage",
     "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand --watch",
     "dev": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack-dev-server --mode=development",
     "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack --mode=production",
