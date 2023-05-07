@@ -1,7 +1,7 @@
 import React from 'react'
-import {render} from 'customRender'
+import ReactDOMServer from 'react-dom/server'
 import AutoScalingText from '../auto-scaling-text'
 
 test('renders', () => {
-  render(<AutoScalingText />)
+  ReactDOMServer.renderToString(<AutoScalingText />)
 })
