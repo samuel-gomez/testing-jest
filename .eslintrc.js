@@ -17,5 +17,18 @@ module.exports = {
       files: ['**/src/**'],
       settings: {'import/resolver': 'webpack'},
     },
+    {
+      files: ['**/__tests__/**'],
+      rules: {
+        'no-console': 'off',
+      },
+      settings: {
+        'import/resolver': {
+          jest: {
+            jestConfigFile: path.join(__dirname, './jest.config.js'),
+          },
+        },
+      },
+    },
   ],
 }
